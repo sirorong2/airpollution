@@ -4,14 +4,19 @@ import '../const/colors.dart';
 
 class CardTitle extends StatelessWidget {
   final String title;
+  final Color backgroundColor;
 
-  const CardTitle({Key? key, required this.title}) : super(key: key);
+  const CardTitle({
+    Key? key,
+    required this.title,
+    required this.backgroundColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: darkColor,
+        color: backgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(16.0),
           topRight: Radius.circular(16.0),
@@ -20,7 +25,7 @@ class CardTitle extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Text(
-          '종류별 통계',
+          title,
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w700,

@@ -12,7 +12,7 @@ class DataUtils{
     return number.toString().padLeft(2,'0');
   }
 
-  static String getUnitFromDataType({required ItemCode itemCode}) {
+  static String getUnitFromItemCode({required ItemCode itemCode}) {
     switch(itemCode) {
       case ItemCode.PM10:
         return '㎍/㎥';
@@ -25,7 +25,10 @@ class DataUtils{
     }
   }
 
-  static String itemCodeKrString({required ItemCode itemCode}) {
+
+
+  static String getItemCodeKrString({required ItemCode itemCode}) {
+    print('itemCode = $itemCode');
     switch(itemCode) {
       case ItemCode.PM10:
         return '미세먼지';

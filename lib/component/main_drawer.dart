@@ -1,15 +1,22 @@
-import 'package:airpollution/const/colors.dart';
 import 'package:airpollution/const/regions.dart';
 import 'package:flutter/material.dart';
 
 typedef OnRegionTap = void Function(String region);
 
-
 class MainDrawer extends StatelessWidget {
   final OnRegionTap onRegionTap;
   final String selectedRegion;
 
-  const MainDrawer({Key? key, required this.onRegionTap, required this.selectedRegion}) : super(key: key);
+  final Color darkColor;
+  final Color lightColor;
+
+  const MainDrawer(
+      {Key? key,
+      required this.onRegionTap,
+      required this.selectedRegion,
+      required this.darkColor,
+      required this.lightColor})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
